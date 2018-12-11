@@ -12,7 +12,8 @@ import top.lijunliang.blog.repository.SeriesDao;
 import top.lijunliang.blog.repository.TopicDao;
 import top.lijunliang.blog.service.PageService;
 
-@org.springframework.stereotype.Service
+@Service
+@Transactional
 public class PageServiceImpl implements PageService
 {
     @Autowired
