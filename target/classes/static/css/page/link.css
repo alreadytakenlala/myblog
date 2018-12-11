@@ -1,0 +1,121 @@
+/*-- change --*/
+/*颈部背景颜色*/
+header nav.source_location {
+    background-color: #E8D098;
+}
+
+/*logo文字颜色*/
+header .logo span.source_location {
+    color: #392f41;
+}
+
+/*导航栏文字颜色*/
+header #example-navbar-collapse .hvr-sweep-to-bottom span.source_location {
+    color: #A49054;
+}
+
+/*导航栏文字背景before颜色*/
+.hvr-sweep-to-bottom:before {
+    background-color: #C6B176;
+}
+
+/*导航栏文字背景before颜色*/
+.hvr-underline-from-center:before {
+    background-color: #C6B176;
+}
+
+/*导航栏文字背景触发hover颜色*/
+#example-navbar-collapse .navbar-nav>li>a>span:hover {
+    color: #392f41;
+}
+
+/*颈部背景颜色*/
+#neck {
+    background-color: #E8D098;
+}
+
+/*颈部文字颜色*/
+#neck span {
+    color: #392f41;
+}
+
+/*颈部文字颜色*/
+#neck .container ul > li > a {
+    color: #392f41;
+}
+
+footer a {
+    color: #A49054;
+}
+/*-- change end --*/
+
+/*-- content --*/
+#content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-top: 1px solid #FBCFAF;
+    width: 80%;
+}
+
+#content ul {
+    margin-top: 50px;
+    margin-left: 100px;
+    border-left: 8px solid #B45B3E;
+    padding-left: 20px;
+}
+
+#content ul > li {
+    margin-top: 30px;
+    margin-left: 10px;
+    list-style: none;
+}
+
+#content span.time {
+    position: absolute;
+    margin-top: 10px;
+    left: 130px;
+    font-size: 12px;
+}
+
+#content span.point {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top: 8px;
+    left: -44px;
+    border: 6px solid #B45B3E;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+#content div.title {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+#content div.title > a {
+    color: #B45B3E;
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: -10px;
+}
+
+#content div.title > a:hover:before {
+    content: '';
+    display: block;
+    float: left;
+    width: 0;
+    height: 0;
+    margin: 8px 8px 8px -38px;
+    border: 10px solid transparent;
+    border-right-color: #B45B3E;
+}
+
+#content ul > li:hover span.point {
+    background-color: #B45B3E;
+}

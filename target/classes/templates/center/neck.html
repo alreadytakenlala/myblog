@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div id="neck" th:fragment="content">
+        <div class="container">
+            <span th:text="${content.neck.title}"></span>
+            <ul>
+                <li th:each="subtitle : ${content.neck.subtitle}">
+                    <a href="#" class="hvr-grow" th:text="${subtitle}"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

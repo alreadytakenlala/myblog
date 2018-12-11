@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" layout:decorator="center/head">
+<head>
+    <meta name="description" th:content="博客"/>
+    <link rel="stylesheet" th:href="@{css/article.css}"/>
+    <script th:src="@{javascript/page/article.js}"></script>
+</head>
+<body>
+<div layout:fragment="content">
+    <header th:replace="/center/header::content"></header>
+    <div th:replace="/center/neck::content"></div>
+    <div id="content" class="container">
+        <div class="article_content">
+            <span th:utext="${content.articleContent.content}"></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

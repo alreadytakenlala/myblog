@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: 我的博客系统
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: Administrator
+Implementation-Vendor-Id: top.lijunliang.blog
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_66
+Main-Class: ${start-class}
+

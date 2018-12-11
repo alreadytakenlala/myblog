@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${content.head.title}"></title>
+    <meta charset="utf-8"/>
+    <meta name="keywords" th:content="${content.head.keywords}"/>
+
+    <!-- 兼容模式：兼容旧版的模式 -->
+    <!-- 避免IE使用兼容模式 -->
+    <!-- PS:X-UA-Compatible是针对 IE8 版本的一个特殊文件头标记，用于为 IE8 指定不同的页面渲染模式，对于ie8之外的浏览器是不识别的。 -->
+    <!-- 添加”chrome=1“将允许站点在使用了谷歌浏览器内嵌框架（Chrome Frame）的客户端渲染，对于没有使用的，则没有任何影响。 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit"/>
+
+    <!-- 移动端窗口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <!-- 指定请求和响应遵循的缓存机制 -->
+    <!-- no-cache: 先发送请求，与服务器确认该资源是否被更改，如果未被更改，则使用缓存 -->
+    <!-- no-store: 不允许缓存，每次都要去服务器上，下载完整的响应。（安全措施） -->
+    <!-- public  : 缓存所有响应，但并非必须。因为max-age也可以做到相同效果 -->
+    <!-- 只为单个用户缓存，因此不允许任何中继进行缓存。（比如说CDN就不允许缓存private的响应） -->
+    <!-- maxage  : 表示当前请求开始，该响应在多久内能被缓存和重用，而不去服务器重新请求。例如：max-age=60表示响应可以再缓存和重用 60 秒 -->
+
+    <!-- 如果第三方网站不希望页面转码，可在页面中添加此协议，当用户进入时，会直接跳转至原网页。 -->
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+
+    <!-- 用于禁止当前页面在移动端浏览时，被百度自动转码。虽然百度的本意是好的，但是转码效果很多时候却不尽人意。所以可以在head中加入例子中的那句话，就可以避免百度自动转码了 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <!-- 图标 -->
+    <link rel="shortcut icon" th:href="@{/image/favicon.png}"/>
+
+    <!-- 现今移动设备越来越多，苹果为iOS设备配备了apple-touch-icon私有属性，添加该属性，在iPhone,iPad,iTouch的safari浏览器上可以使用添加到主屏按钮将网站添加到主屏幕上，方便用户以后访问。 -->
+    <link rel="apple-touch-icon" th:href="@{/image/logo.png}"/>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/hover-min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+
+    <script th:src="@{/javascript/jquery.min.js}"></script>
+    <script th:src="@{/javascript/bootstrap.min.js}"></script>
+</head>
+<body>
+    <div layout:fragment="content"></div>
+    <div th:replace="/center/footer::content"></div>
+</body>
+</html>

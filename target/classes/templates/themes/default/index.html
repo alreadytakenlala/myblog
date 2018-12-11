@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" layout:decorator="center/head">
+<head>
+    <meta name="description" th:content="博客"/>
+    <link rel="stylesheet" th:href="@{css/page/index.css}"/>
+    <script th:src="@{/javascript/page/index.js}"></script>
+</head>
+<body>
+    <div layout:fragment="content">
+        <header th:replace="/center/header::content"></header>
+        <div th:replace="/center/neck::content"></div>
+        <div id="content" class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <ul>
+                        <li th:each="section : ${content.leftSection.section}">
+                            <a class="hvr-underline-from-center" th:href="@{'/article?id=' + ${section.id}}" th:text="${section.title}"></a>
+                            <p th:text="${section.description}"></p>
+                            <p><span class="glyphicon glyphicon-calendar"></span>&nbsp;<span th:text="${#dates.format(section.time, 'yyyy-MM-dd')}"></span></p>
+                        </li>
+                    </ul>
+                    <div id="pageNum">
+                        <input class="index" th:value="${pageInfo.pageNum}" hidden="hidden"></input>
+                        <a th:each="num : ${pageInfo.navigatepageNums}" th:href="@{'/page?pageNum=' + ${num}}">
+                            <span th:text="${num}"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="section">
+                        <h3 th:text="${content.rightSection.up.title}"></h3>
+                        <div class="small_section" th:each="section : ${content.rightSection.up.upSections}">
+                            <a href="#">
+                                <div class="up">
+                                    <span th:text="'我的'+${section.title}"></span>
+                                </div>
+                                <p th:text="${section.description}"></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

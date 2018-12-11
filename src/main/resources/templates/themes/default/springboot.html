@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" layout:decorator="center/head">
+<head>
+    <meta name="description" th:content="博客"/>
+    <link rel="stylesheet" th:href="@{css/page/springboot.css}"/>
+</head>
+<body>
+<div layout:fragment="content">
+    <header th:replace="/center/header::content"></header>
+    <div th:replace="/center/neck::content"></div>
+    <div id="content" class="container">
+        <ul>
+            <li th:each="article : ${content.bodyContent.articles}">
+                <span class="time" th:text="${#dates.format(article.time, 'yyyy-MM-dd')}"></span><span class="point"></span>
+                <div class="title">
+                    <a th:href="@{'/article?id=' + ${article.id}}" th:text="${article.title}"></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
