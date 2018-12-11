@@ -12,6 +12,7 @@ import top.lijunliang.blog.service.DataService;
 import java.util.List;
 
 @Service
+@Transactional
 public class DataServiceImpl implements DataService
 {
     @Autowired
