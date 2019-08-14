@@ -13,10 +13,14 @@
 这个项目使用thymleaf模板技术， 使用公共组件页面拼接。项目不大，是一个适合初学者学习的项目。
 
 ### 展示
-首页： http://127.0.0.1:8080
-编辑页: 
+* 首页： http://127.0.0.1:8080
+* 编辑页: 
 
 ### 部署
+- 项目配置
+    * [MySQL](https://dev.mysql.com/downloads/mysql/)
+    * [JDK1.8或以上](http://www.oracle.com/technetwork/java/javase/overview/index.html)
+    * [Maven](https://maven.apache.org/download.cgi)
 - 编辑 application.properties 文件，修改要连接的数据库用户名密码
 ```
 spring.datasource.username=root
