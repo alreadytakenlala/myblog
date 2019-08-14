@@ -17,22 +17,22 @@
 * 编辑页: 
 
 ### 部署
-- 项目配置
+1. 项目配置
     * [MySQL](https://dev.mysql.com/downloads/mysql/)
     * [JDK1.8或以上](http://www.oracle.com/technetwork/java/javase/overview/index.html)
     * [Maven](https://maven.apache.org/download.cgi)
-- 编辑 application.properties 文件，修改要连接的数据库用户名密码
+2. 编辑 application.properties 文件，修改要连接的数据库用户名密码
    ```
    spring.datasource.username=root
    spring.datasource.password=root
    ```
-- 创建数据库
+3. 创建数据库
    ```
    create database blog;
    ```
-- 选择使用数据库
+4. 选择使用数据库
    ```
    use blog;
    ```
-- 数据库依次导入myblog-master/sql的数据库文件
+5. 数据库依次导入myblog-master/sql的数据库文件
    * blog.sql
