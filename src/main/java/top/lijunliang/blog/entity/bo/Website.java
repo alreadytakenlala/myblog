@@ -4,7 +4,7 @@ package top.lijunliang.blog.entity.bo;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
-import top.lijunliang.blog.entity.vo.Page;
+
 import top.lijunliang.blog.utils.BlogUtil;
 
 import java.util.ArrayList;
@@ -30,7 +30,7 @@ public class Website
 
     private List<Software> softwares = new ArrayList<>(); //开源软件
 
-    private Topic[] topics = new Topic[5]; //主话题
+    private List<Topic> topics = new ArrayList<>(); //主话题
 
     private List<Topic> otherTopics = new ArrayList<>(); //其他话题
 
@@ -61,7 +61,7 @@ public class Website
      */
     public Website addTopic(Topic topic)
     {
-        BlogUtil.addElement(topics, topic);
+        topics.add(topic);
         return this;
     }
 
@@ -69,7 +69,7 @@ public class Website
      * 获取话题
      * @return List<Topic>
      */
-    public Topic[] getTopics()
+    public List<Topic> getTopics()
     {
         return topics;
     }
@@ -213,7 +213,7 @@ public class Website
     {
         articles = new ArrayList<>();
         softwares = new ArrayList<>();
-        topics = new Topic[5];
+        topics = new ArrayList<>();
         otherTopics = new ArrayList<>();
     }
 }

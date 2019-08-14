@@ -8,6 +8,9 @@ import top.lijunliang.blog.entity.bo.Topic;
 import top.lijunliang.blog.entity.bo.Website;
 import top.lijunliang.blog.entity.vo.Page;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 页面导航栏
  */
@@ -23,22 +26,18 @@ public class NavigationBar implements PageComponent
 
     private String logoName;
 
-    private String[] smallTitle;
+    private List<String> smallTitle;
 
     @Override
     public void update(Page page)
     {
         logoName = website.getName();
-        Topic[] topics = website.getTopics();
-        smallTitle = new String[6];
-        smallTitle[0] = home;
+        List<Topic> topics = website.getTopics();
+        smallTitle = new ArrayList<>();
+        smallTitle.add("Home");
 
-        for (int i = 0; i < topics.length; i++)
-        {
-            if (topics[i] != null)
-            {
-                smallTitle[i+1] = topics[i].getName();
-            }
+        for (Topic topic : topics) {
+            smallTitle.add(topic.getName());
         }
     }
 
@@ -47,7 +46,7 @@ public class NavigationBar implements PageComponent
         return logoName;
     }
 
-    public String[] getSmallTitle()
+    public List<String> getSmallTitle()
     {
         return smallTitle;
     }

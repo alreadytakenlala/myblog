@@ -14,12 +14,6 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 @MapperScan("top.lijunliang.blog.repository")
 public class ApplicationServer extends SpringBootServletInitializer
 {
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application)
-    {
-        return application.sources(ApplicationServer.class);
-    }
-
     public static void main(String[] args)
     {
         SpringApplication.run(ApplicationServer.class, args);

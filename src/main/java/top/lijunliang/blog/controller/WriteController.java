@@ -11,7 +11,6 @@ import top.lijunliang.blog.service.PageService;
 import top.lijunliang.blog.utils.StatusCode;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 @Controller
 public class WriteController
@@ -22,7 +21,7 @@ public class WriteController
     @Autowired
     private DataService dataService;
 
-    @GetMapping("/writing/15603069369")
+    @GetMapping("/writing")
     public String write(HttpServletRequest request)
     {
         request.setAttribute("content", PageService.getWriting());
