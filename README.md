@@ -64,3 +64,8 @@ CREATE TABLE `topic` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 ```
+- 编辑 application.properties 文件
+```
+spring.datasource.username=root
+spring.datasource.password=root
+```
