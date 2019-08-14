@@ -65,6 +65,7 @@ CREATE TABLE `topic` (
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 ```
 - 编辑 application.properties 文件
+- 修改要连接的数据库用户名密码
 ```
 spring.datasource.username=root
 spring.datasource.password=root
