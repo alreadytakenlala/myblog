@@ -12,7 +12,16 @@
 这是我学习 SpringBoot 的时候做的第一个练手项目，当时经常看[纯洁的微笑](http://www.ityouknow.com/)的博客，非常羡慕，所以参考做了这个博客平台。
 这个项目使用thymleaf模板技术， 使用公共组件页面拼接。项目不大，是一个适合初学者学习的项目。
 
+### 展示地址
+首页： http://127.0.0.1:8080
+编辑页: 
+
 ### 部署
+- 编辑 application.properties 文件，修改要连接的数据库用户名密码
+```
+spring.datasource.username=root
+spring.datasource.password=root
+```
 - 创建数据库
 ```
 create database blog;
@@ -67,10 +76,3 @@ CREATE TABLE `topic` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 ```
-- 编辑 application.properties 文件，修改要连接的数据库用户名密码
-```
-spring.datasource.username=root
-spring.datasource.password=root
-```
-### 展示地址
-首页： 
