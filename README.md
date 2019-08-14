@@ -1,9 +1,9 @@
 # 博客平台
 
 ### 技术栈
-> 后端：SpringBoot + thymleaf
-> 数据库: mysql
-> 服务器: tomcat
+> 后端：SpringBoot + thymleaf\n
+> 数据库: mysql\n
+> 服务器: tomcat\n
 
 ### 描述
 这是我学习 SpringBoot 的时候做的第一个练手项目，当时经常看[纯洁的微笑](http://www.ityouknow.com/)的博客，非常羡慕，所以参考做了这个博客平台。
