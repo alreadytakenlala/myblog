@@ -34,5 +34,5 @@
    ```
    use blog;
    ```
-5. 数据库依次导入myblog-master/sql的数据库文件
+5. 数据库导入myblog-master/sql下的数据库文件
    * blog.sql
