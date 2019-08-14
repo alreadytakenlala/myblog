@@ -37,5 +37,11 @@
 5. 数据库导入myblog-master/sql下的数据库文件
    * blog.sql
    
- ### 项目截图
- ![](./doc/home.png)
+### 项目截图
+![](./doc/home.png)
+![](./doc/springboot.png)
+![](./doc/springcloud.png)
+![](./doc/articles.png)
+![](./doc/about.png)
+![](./doc/footer.png)
+![](./doc/article.png)
