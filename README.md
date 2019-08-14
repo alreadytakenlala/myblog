@@ -36,3 +36,6 @@
    ```
 5. 数据库导入myblog-master/sql下的数据库文件
    * blog.sql
+   
+ ### 项目截图
+ ![](./doc/home.png)
