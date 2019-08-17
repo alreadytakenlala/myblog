@@ -5,11 +5,11 @@
 
 ### 技术栈
 > 1. 后端：SpringBoot + thymleaf
-> 2. 数据库: mysql
+> 2. 数据库: mybatis + mysql
 > 3. 服务器: tomcat
 
 ### 描述
-本项目采用thymleaf基于组件设计，来实现拖放式编程、快速的属性处理以及真正的面向对象的设计。后端用SpringBoot实现，采用观察者模式来实现组件之间的协调，本项目UI设计参考于[纯洁的微笑](http://www.ityouknow.com/)。
+本项目采用thymleaf基于组件设计，来实现拖放式编程、快速的属性处理以及真正的面向对象的设计；后端用SpringBoot实现，采用观察者模式来实现组件之间的协调；采用mysql搭建数据库，使用mybatis来实现作为持久层；本项目UI设计参考于[纯洁的微笑](http://www.ityouknow.com/)。
 
 ### 展示
 * 首页：    http://localhost:8080
